@@ -1,0 +1,18 @@
+{
+    "name": "qti-render",
+    "version": "0.0.0",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview",
+        "xslt": "xslt3 -xsl:public/example.xsl -s:public/example.xml -o:books.html -t"
+    },
+    "devDependencies": {
+        "typescript": "^4.4.4",
+        "vite": "^2.7.2"
+    },
+    "dependencies": {
+        "saxon-js": "^2.3.0",
+        "xslt3": "^2.3.0"
+    }
+}
