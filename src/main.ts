@@ -1,10 +1,10 @@
 import loadXML from './utils/loadXML';
 import choiceInteraction from './interactions/choice';
-Promise.all([loadXML('xml/11/choice11.xml'), loadXML('xslt/main.xsl')]).then(r => {
+Promise.all([loadXML('xml/01/choice01.xml'), loadXML('xslt/main.xsl')]).then(r => {
     const [xmlDoc, xslDoc] = r;
     const xsltProcessor = new XSLTProcessor();
     xsltProcessor.importStylesheet(xslDoc);
-    xsltProcessor.setParameter(null, 'baseURI', 'xml/11/');
+    xsltProcessor.setParameter(null, 'baseURI', 'xml/01/');
     const frag = xsltProcessor.transformToFragment(xmlDoc, document);
 
     frag.querySelectorAll<HTMLElement>('.soundButton').forEach(el => {
