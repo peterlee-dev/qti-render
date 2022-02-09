@@ -4,7 +4,7 @@
     <xsl:param name="baseURI"></xsl:param>
     <xsl:include href="/xslt/choice.xsl"></xsl:include>
 
-    <xsl:template match="div|p|img">
+    <xsl:template match="div|p|img|audio">
         <xsl:copy>
             <xsl:apply-templates select="@*|node()" />
         </xsl:copy>
@@ -16,6 +16,18 @@
         </xsl:copy>
     </xsl:template>
     <xsl:template match="img/@src">
+        <xsl:variable name="newURI">
+            <xsl:call-template name="replace">
+                <xsl:with-param name="text" select="." />
+                <xsl:with-param name="replace" select="'./'" />
+                <xsl:with-param name="by" select="$baseURI" />
+            </xsl:call-template>
+        </xsl:variable>
+        <xsl:attribute name="src">
+            <xsl:value-of select="$newURI" />
+        </xsl:attribute>
+    </xsl:template>
+    <xsl:template match="audio/@src">
         <xsl:variable name="newURI">
             <xsl:call-template name="replace">
                 <xsl:with-param name="text" select="." />

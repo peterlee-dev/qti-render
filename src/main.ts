@@ -7,6 +7,13 @@ Promise.all([loadXML('xml/11/choice11.xml'), loadXML('xslt/main.xsl')]).then(r =
     xsltProcessor.setParameter(null, 'baseURI', 'xml/11/');
     const frag = xsltProcessor.transformToFragment(xmlDoc, document);
 
+    frag.querySelectorAll<HTMLElement>('.soundButton').forEach(el => {
+        const audio = frag.getElementById(el.dataset.audioId || '') as HTMLAudioElement;
+        el.addEventListener('click', () => {
+            audio.play();
+        });
+    });
+
     choiceInteraction(xmlDoc, frag);
 
     const app = document.querySelector<HTMLDivElement>('#app')!;
