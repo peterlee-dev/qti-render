@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <?xml-stylesheet type="text/xsl" href="choice.xsl"?> -->
+<qti-assessment-item identifier="choice" title="Unattended Luggage" adaptive="false" time-dependent="false">
+    <qti-response-declaration identifier="RESPONSE" cardinality="single" base-type="identifier">
+		<qti-correct-response>
+			<qti-value>ChoiceC</qti-value>
+		</qti-correct-response>
+	</qti-response-declaration>
+	<qti-outcome-declaration identifier="SCORE" cardinality="single" base-type="float">
+		<qti-default-value>
+			<qti-value>0</qti-value>
+		</qti-default-value>
+	</qti-outcome-declaration>
+    <qti-item-body>
+        <qti-choice-interaction
+            response-identifier="RESPONSE" shuffle="true"
+            max-choices="1"
+            class="qti-choices-stacking-4"
+        >
+            <qti-prompt>
+                <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                    <img class="soundButton" src="./speaker.svg" style="width: 30px; height: 30px;"/>
+                    <div style="margin-left:0.5rem;  font-size: 2rem">사과의 수보다 하나 많은 수의 그림을 고르세요.</div>
+                </div>
+                <div style="display: flex; justify-content: center; width: 800px;">
+                    <img src="./apple.svg" width="40" height="40"/>
+                </div>
+            </qti-prompt>
+                <qti-simple-choice identifier="ChoiceA">
+                    <div style="width: 150px; height: 180px; display: flex; align-items: center; justify-content: center">
+                        <div style="position: relative; width: 200px; height: 100px">
+                            <img src="./watermelon.svg" width="60" height="60" style="position: absolute; left: 45px; top: -20px;"/>
+                            <img src="./watermelon.svg" width="60" height="60" style="position: absolute; left: 5px; top: 60px;"/>
+                            <img src="./watermelon.svg" width="60" height="60" style="position: absolute; left: 85px; top: 60px;"/>
+                        </div> 
+                    </div>
+                </qti-simple-choice>
+                <qti-simple-choice identifier="ChoiceB">
+                    <div style="width: 150px; height: 180px; display: flex; align-items: center; justify-content: center">
+                    <div style="position: relative; width: 200px; height: 100px">
+                        <img src="./pineapple.svg" width="80" height="80" style="position: absolute; left: 5px; top: 0px;"/>
+                        <img src="./pineapple.svg" width="80" height="80" style="position: absolute; left: 70px; top: 0px;"/>                    
+                    </div> 
+                    </div>
+                </qti-simple-choice>
+                <qti-simple-choice identifier="ChoiceC">
+                    <div style="width: 150px; height: 180px; display: flex; align-items: center; justify-content: center">
+                        <div style="position: relative; width: 200px; height: 100px">
+                            <img src="./grape.svg" width="60" height="60" style="position: absolute; left: 20px; top: -20px;"/>
+                            <img src="./grape.svg" width="60" height="60" style="position: absolute; left: 70px; top: -20px;"/>
+                            <img src="./grape.svg" width="60" height="60" style="position: absolute; left: -5px; top: 60px;"/>
+                            <img src="./grape.svg" width="60" height="60" style="position: absolute; left: 45px; top: 60px;"/>
+                            <img src="./grape.svg" width="60" height="60" style="position: absolute; left: 95px; top: 60px;"/>
+                        </div>
+                    </div>
+                </qti-simple-choice>
+                <qti-simple-choice identifier="ChoiceD">
+                    <div style="width: 150px; height: 180px; display: flex; align-items: center; justify-content: center">
+                        <img src="./strawberry.svg" width="60" height="60"/>
+                    </div>
+                </qti-simple-choice>
+        </qti-choice-interaction>
+    </qti-item-body>
+</qti-assessment-item>
+
+
