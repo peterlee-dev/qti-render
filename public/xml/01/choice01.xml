@@ -19,7 +19,7 @@
             class="qti-choices-stacking-2"
         >
             <qti-prompt>
-                <audio id="tts" src="./01.mp3"></audio>
+                <audio id="tts" src="./01.MP3"></audio>
                 <div style="display: flex; align-items: center; margin-bottom: 1rem">
                     <img
                         class="soundButton"

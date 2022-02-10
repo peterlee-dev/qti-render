@@ -19,8 +19,14 @@
             class="qti-choices-stacking-2"
         >
             <qti-prompt>
+                <audio id="tts" src="./04.MP3"></audio>
                 <div style="display: flex; align-items: center; margin-bottom: 1rem">
-                    <img class="soundButton" src="./speaker.svg" style="width: 30px; height: 30px" />
+                    <img
+                        class="soundButton"
+                        data-audio-id="tts"
+                        src="./speaker.svg"
+                        style="width: 30px; height: 30px"
+                    />
                     <div style="margin-left: 0.5rem; font-size: 2rem">더 짧은 연필을 고르세요.</div>
                 </div>
             </qti-prompt>

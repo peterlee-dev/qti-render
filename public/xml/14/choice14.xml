@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <?xml-stylesheet type="text/xsl" href="choice.xsl"?> -->
+<qti-assessment-item identifier="choice" title="Unattended Luggage" adaptive="false" time-dependent="false">
+    <qti-response-declaration identifier="RESPONSE" cardinality="single" base-type="identifier">
+		<qti-correct-response>
+			<qti-value>ChoiceC</qti-value>
+		</qti-correct-response>
+	</qti-response-declaration>
+	<qti-outcome-declaration identifier="SCORE" cardinality="single" base-type="float">
+		<qti-default-value>
+			<qti-value>0</qti-value>
+		</qti-default-value>
+	</qti-outcome-declaration>
+    <qti-item-body>
+        <qti-choice-interaction
+            response-identifier="RESPONSE" shuffle="true"
+            max-choices="1"
+            class="qti-choices-stacking-4"
+        >
+            <qti-prompt>
+                <audio id="tts" src="./14.MP3"></audio>
+                <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                    <img class="soundButton" data-audio-id="tts" src="./speaker.svg" style="width: 30px; height: 30px;"/>
+                    <div style="margin-left:0.5rem;  font-size: 2rem">사과의 개수와 숫자가 맞는 것을 고르세요.</div>
+                </div>
+            </qti-prompt>
+                <qti-simple-choice identifier="ChoiceA">
+                    <div style="width: 150px; height: 300px; display: flex; align-items: center; justify-content: center">
+                        <div style="position: relative; width: 200px; height: 100px">
+                            <img src="./apple.svg" width="60" height="60" style="position: absolute; left: 45px; top: -20px;"/>
+                            <div style="position: absolute; left: 60px; top: 130px; font-size: 3rem">2</div>
+                        </div>
+                    </div>
+                </qti-simple-choice>
+                <qti-simple-choice identifier="ChoiceB">
+                    <div style="width: 150px; height: 300px; display: flex; align-items: center; justify-content: center">
+                        <div style="position: relative; width: 200px; height: 100px">
+                            <img src="./apple.svg" width="60" height="60" style="position: absolute; left: 10px; top: -20px;"/>
+                            <img src="./apple.svg" width="60" height="60" style="position: absolute; left: 75px; top: -20px;"/>
+                            <div style="position: absolute; left: 60px; top: 130px; font-size: 3rem">1</div>
+                        </div>
+                    </div>
+                </qti-simple-choice>
+                <qti-simple-choice identifier="ChoiceC">
+                    <div style="width: 150px; height: 300px; display: flex; align-items: center; justify-content: center">
+                        <div style="position: relative; width: 200px; height: 100px">
+                            <img src="./apple.svg" width="60" height="60" style="position: absolute; left: 10px; top: -20px;"/>                             
+                            <img src="./apple.svg" width="60" height="60" style="position: absolute; left: 75px; top: -20px;"/>
+                            <div style="position: absolute; left: 60px; top: 130px; font-size: 3rem">2</div>
+                        </div>
+                    </div>
+                </qti-simple-choice>
+                <qti-simple-choice identifier="ChoiceD">
+                    <div style="width: 150px; height: 300px; display: flex; align-items: center; justify-content: center">
+                        <div style="position: relative; width: 200px; height: 100px">
+                            <img src="./apple.svg" width="60" height="60" style="position: absolute; left: 45px; top: -40px;"/>
+                            <img src="./apple.svg" width="60" height="60" style="position: absolute; left: 10px; top: 20px;"/>
+                            <img src="./apple.svg" width="60" height="60" style="position: absolute; left: 75px; top: 20px;"/>                            
+                            <div style="position: absolute; left: 60px; top: 130px; font-size: 3rem">1</div>
+                        </div>
+                    </div>
+                </qti-simple-choice>
+        </qti-choice-interaction>
+    </qti-item-body>
+</qti-assessment-item>
+
+

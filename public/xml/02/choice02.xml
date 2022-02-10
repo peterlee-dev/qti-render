@@ -12,19 +12,37 @@
         </qti-default-value>
     </qti-outcome-declaration>
     <qti-item-body>
-        <qti-choice-interaction response-identifier="RESPONSE" shuffle="false" max-choices="1">
-            <qti-prompt>네모(사각형)를 고르세요.</qti-prompt>
+        <qti-choice-interaction
+            response-identifier="RESPONSE" shuffle="true"
+            max-choices="1"
+            class="qti-choices-stacking-2"
+        >
+            <qti-prompt>
+                <audio id="tts" src="./test.MP3"></audio>
+                <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                    <img class="soundButton" data-audio-id="tts" src="./speaker.svg" style="width: 30px; height: 30px;"/>
+                    <div style="margin-left:0.5rem;  font-size: 2rem">네모(사각형)를 고르세요.</div>
+                </div>
+            </qti-prompt>
             <qti-simple-choice identifier="ChoiceA">
-                <img src="./001.svg" width="40" height="40" />
+                <div style="width: 200px; height: 100px; display: flex; align-items: center; justify-content: center">
+                    <img src="./001.svg" width="80" height="80" />
+                </div>
             </qti-simple-choice>
             <qti-simple-choice identifier="ChoiceB">
-                <img src="./002.svg" width="40" height="40" />
+                <div style="width: 200px; height: 100px; display: flex; align-items: center; justify-content: center">
+                    <img src="./002.svg" width="80" height="80" />
+                </div>    
             </qti-simple-choice>
             <qti-simple-choice identifier="ChoiceC">
-                <img src="./003.svg" width="40" height="40" />
+                <div style="width: 200px; height: 100px; display: flex; align-items: center; justify-content: center">
+                    <img src="./003.svg" width="80" height="80" />
+                </div>    
             </qti-simple-choice>
             <qti-simple-choice identifier="ChoiceD">
-                <img src="./004.svg" width="40" height="40" />
+                <div style="width: 200px; height: 100px; display: flex; align-items: center; justify-content: center">
+                    <img src="./004.svg" width="80" height="80" />
+                </div>
             </qti-simple-choice>
         </qti-choice-interaction>
     </qti-item-body>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <?xml-stylesheet type="text/xsl" href="choice.xsl"?> -->
+<qti-assessment-item identifier="choice" title="Unattended Luggage" adaptive="false" time-dependent="false">
+    <qti-response-declaration identifier="RESPONSE" cardinality="single" base-type="identifier">
+		<qti-correct-response>
+			<qti-value>ChoiceC</qti-value>
+		</qti-correct-response>
+	</qti-response-declaration>
+	<qti-outcome-declaration identifier="SCORE" cardinality="single" base-type="float">
+		<qti-default-value>
+			<qti-value>0</qti-value>
+		</qti-default-value>
+	</qti-outcome-declaration>
+    <qti-item-body>
+        <qti-choice-interaction
+            response-identifier="RESPONSE" shuffle="true"
+            max-choices="1"
+            class="qti-choices-stacking-4"
+        >
+            <qti-prompt>
+                <audio id="tts" src="./19.MP3"></audio>
+                <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                    <img class="soundButton" data-audio-id="tts" src="./speaker.svg" style="width: 30px; height: 30px;"/>
+                    <div style="margin-left:0.5rem;  font-size: 2rem">그림을 차례대로 보고 빈 곳에 들어갈 알맞은 것을 고르세요.</div>
+                </div>
+            </qti-prompt>
+                <qti-simple-choice identifier="ChoiceA">
+                    <img src="./images/01/001.svg" width="40" height="40"/>
+                </qti-simple-choice>
+                <qti-simple-choice identifier="ChoiceB">
+                    <img src="./images/01/002.svg" width="40" height="40"/>
+                </qti-simple-choice>
+                <qti-simple-choice identifier="ChoiceC">
+                    <img src="./images/01/003.svg" width="40" height="40"/>
+                </qti-simple-choice>
+                <qti-simple-choice identifier="ChoiceD">
+                    <img src="./images/01/004.svg" width="40" height="40"/>
+                </qti-simple-choice>
+        </qti-choice-interaction>
+    </qti-item-body>
+</qti-assessment-item>
+
+

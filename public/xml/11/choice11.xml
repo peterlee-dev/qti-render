@@ -18,12 +18,18 @@
             class="qti-choices-stacking-4"
         >
             <qti-prompt>
+                <audio id="tts" src="./11.MP3"></audio>
                 <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-                    <img class="soundButton" src="./speaker.svg" style="width: 30px; height: 30px;"/>
+                    <img class="soundButton" data-audio-id="tts" src="./speaker.svg" style="width: 30px; height: 30px;"/>
                     <div style="margin-left:0.5rem;  font-size: 2rem">사과의 수보다 하나 많은 수의 그림을 고르세요.</div>
                 </div>
-                <div style="display: flex; justify-content: center; width: 800px;">
-                    <img src="./apple.svg" width="40" height="40"/>
+                <div style="position: relative; height:180px;">
+                    <div style="position: absolute; left: 280px; top: 0px; width:180px; height:160px; border:2px solid skyblue; border-radius:10px">
+                        <img src="./apple.svg" width="60" height="60" style="position: absolute; left: 20px; top: 15px;"/>
+                        <img src="./apple.svg" width="60" height="60" style="position: absolute; left: 95px; top: 15px;"/>
+                        <img src="./apple.svg" width="60" height="60" style="position: absolute; left: 20px; top: 85px;"/>
+                        <img src="./apple.svg" width="60" height="60" style="position: absolute; left: 95px; top: 80px;"/>
+                    </div>
                 </div>
             </qti-prompt>
                 <qti-simple-choice identifier="ChoiceA">
