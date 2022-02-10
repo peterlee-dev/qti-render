@@ -1,0 +1,17 @@
+#app {
+    display: inline-block;
+}
+
+.soundButton {
+    cursor: pointer;
+}
+.qti-prompt {
+    font-family: NanumGothic-Bold;
+    font-size: 30px;
+    color: #545454;
+}
+
+@font-face {
+    font-family: NanumGothic-Bold;
+    src: url('/fonts/NanumGothic-Bold.woff');
+}

@@ -2,12 +2,32 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
     <xsl:output method="html" indent="no" encoding="UTF-8" />
     <xsl:param name="baseURI"></xsl:param>
+
+    <xsl:template match="qti-assessment-item">
+        <xsl:apply-templates select="qti-stylesheet" />
+        <xsl:apply-templates select="qti-item-body" />
+    </xsl:template>
+    <xsl:template match="qti-item-body">
+        <xsl:apply-templates />
+    </xsl:template>
+
     <xsl:include href="/xslt/choice.xsl"></xsl:include>
 
     <xsl:template match="div|p|img|audio">
         <xsl:copy>
             <xsl:apply-templates select="@*|node()" />
         </xsl:copy>
+    </xsl:template>
+
+    <xsl:template match="qti-stylesheet">
+        <xsl:variable name="newURI">
+            <xsl:call-template name="replace">
+                <xsl:with-param name="text" select="@href" />
+                <xsl:with-param name="replace" select="'./'" />
+                <xsl:with-param name="by" select="$baseURI" />
+            </xsl:call-template>
+        </xsl:variable>
+        <link rel="stylesheet" href="{$newURI}" />
     </xsl:template>
 
     <xsl:template match="@*|node()">
